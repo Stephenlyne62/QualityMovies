@@ -1,0 +1,217 @@
+/* Header Navigation */
+header {
+    background-color: #f3f8e5; /* Blue background for the navigation bar */
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+ /* Additional CSS */
+ .intro {
+    position: relative;
+}
+
+.intro-image-container {
+    position: relative;
+}
+
+.intro .overlay-text {
+    position: absolute;
+    top: 5%; /* Moves text near the top */
+    left: 50%; /* Centers text horizontally */
+    transform: translateX(-50%); /* Ensures proper centering */
+    width: 90%; /* Restricts text width for readability */
+    color: rgb(85, 19, 19); /* Text color */
+    font-size: 1.5rem; /* Adjust font size */
+    text-align: center; /* Centers text */
+    padding: 1rem; /* Adds padding */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+}
+
+.title-overlay{
+    background-color: rgb(85, 19, 19); ;
+}
+
+
+h1 {
+    text-align: center; /* Centers the text horizontally */
+    color: rgb(85, 19, 19);  /* Sets the text color (a nice blue in this case) */
+  }
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Spread links evenly across the bar */
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: white; /* White color for links */
+    font-weight: bold; /* Optional: Make the links bold for emphasis */
+    display: block; /* Make the anchor tag block-level so padding works */
+    padding: 10px 20px; /* Add padding for better clickability */
+    text-align: center; /* Center text inside each link */
+}
+
+/* Intro Section */
+.intro {
+    width: 100%; /* Ensure it spans the full width */
+    margin: 0;
+    padding: 0;
+}
+
+.intro-image-container {
+    width: 100%; /* Ensure the container fills the full width */
+    overflow: hidden; /* Prevent any overflow beyond the container */
+}
+
+.full-width-image {
+    width: 100%; /* Make the image take up the entire width */
+    height: 300px; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Image Container for the .imagec Section */
+.image-container {
+    display: flex; /* Align images in a row */
+    flex-wrap: wrap; /* Allow wrapping of images */
+    gap: 10px; /* Space between images */
+    justify-content: space-between; /* Spread the boxes evenly across the container */
+    width: 100%; /* Ensure the container takes up the full width */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Individual Image Box */
+.image-box {
+    position: relative; /* Create a stacking context for titles */
+    width: 23%; /* Set the width to approximately 25%, allowing for a small gap */
+    min-width: 220px; /* Ensure boxes do not become too small on small screens */
+}
+
+
+/* Image Styling */
+.image-box img {
+    width: 100%; /* Make the image fill its container */
+    height: 350px; /* Fixed height for consistency */
+    object-fit: cover; /* Maintain aspect ratio and fill the box */
+    display: block; /* Remove inline spacing below the image */
+}
+
+.paragraphs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the paragraphs under the images */
+    gap: 20px; /* Space between paragraphs */
+    width: 100%;
+    max-width: 1200px; /* Optional: Ensure paragraphs don’t stretch too wide */
+}
+
+.paragraphs p {
+    width: 23%; /* Make paragraphs same width as images */
+    text-align: center; /* Optional: Center text inside each paragraph */
+}
+
+/* Title Overlay Styling */
+.title-overlay {
+    position: absolute; /* Position relative to the parent container */
+    bottom: 0; /* Stick to the bottom of the image */
+    width: 100%; /* Span the entire width of the image */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #fff; /* White text for contrast */
+    text-align: center; /* Center-align the text */
+    padding: 5px 0; /* Add some padding for the title */
+    font-size: 26px; /* Adjust font size */
+}
+
+/* Add the following styles for the table section */
+.table {
+    display: flex; /* Use flexbox to arrange elements in a row */
+    justify-content: space-between; /* Space the tables evenly */
+    gap: 20px; /* Optional: Adds space between the tables */
+    margin: 20px 0; /* Optional: Adds margin above and below the tables */
+}
+
+table {
+    width: 48%; /* Set the width of each table to take up roughly half the container */
+    border-collapse: collapse; /* Make the table borders collapse */
+}
+
+caption {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+footer {
+    background-color: #dbe3c7;  /* Set background color to blue */
+    color: white;            /* Set text color to white */
+    padding: 20px;           /* Add some padding for spacing */
+    text-align: center;      /* Center-align the text */
+}
+
+footer h2 {
+    margin: 0;               /* Remove margin around the heading */
+    font-size: 24px;         /* Adjust the font size for the title */
+}
+
+footer p {
+    margin: 5px 0;           /* Add some margin to space out the paragraphs */
+    font-size: 18px;         /* Adjust the font size for the paragraph text */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-box {
+        width: 45%; /* Use 45% width for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-box {
+        width: 100%; /* Full-width boxes for small screens */
+    }
+}
+
+body{
+    background-color: antiquewhite; 
+}
+
+p{
+    font-family: cursive ;
+    color: rgb(85, 19, 19); ;
+}
+
+/* Add some basic styling for the buttons */
+.filter-buttons {
+    text-align: center;
+    margin: 20px 0;
+}
+.filter-buttons button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.filter-buttons button.active {
+    background-color: #f3f8e5;
+    color: rgb(27, 170, 63);
+}
+.imagec {
+    margin: 20px 0;
+}
