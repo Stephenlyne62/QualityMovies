@@ -5,50 +5,19 @@ header {
     border-bottom: 1px solid #ccc;
 }
 
- /* Additional CSS */
- .intro {
-    position: relative;
-}
-
-.intro-image-container {
-    position: relative;
-}
-
-.intro .overlay-text {
-    position: absolute;
-    top: 5%; /* Moves text near the top */
-    left: 50%; /* Centers text horizontally */
-    transform: translateX(-50%); /* Ensures proper centering */
-    width: 90%; /* Restricts text width for readability */
-    color: rgb(85, 19, 19); /* Text color */
-    font-size: 1.5rem; /* Adjust font size */
-    text-align: center; /* Centers text */
-    padding: 1rem; /* Adds padding */
-    border-radius: 5px; /* Slightly rounded corners */
-}
-
-
-.full-width-image {
-    width: 100%;
-    height: auto;
-}
-
-.title-overlay{
-    background-color: rgb(85, 19, 19); ;
-}
-
-
 h1 {
     text-align: center; /* Centers the text horizontally */
     color: rgb(85, 19, 19);  /* Sets the text color (a nice blue in this case) */
-  }
+}
 
+/* Add Flexbox to nav for mobile */
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between; /* Spread links evenly across the bar */
+    flex-wrap: wrap; /* Ensures links wrap on smaller screens */
+    justify-content: center; /* Centers links on small screens */
     width: 100%;
 }
 
@@ -95,7 +64,6 @@ nav a {
     width: 23%; /* Set the width to approximately 25%, allowing for a small gap */
     min-width: 220px; /* Ensure boxes do not become too small on small screens */
 }
-
 
 /* Image Styling */
 .image-box img {
@@ -173,45 +141,89 @@ footer p {
     font-size: 18px;         /* Adjust the font size for the paragraph text */
 }
 
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .image-box {
-        width: 45%; /* Use 45% width for medium screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .image-box {
-        width: 100%; /* Full-width boxes for small screens */
-    }
-}
-
-body{
-    background-color: antiquewhite; 
-}
-
-p{
-    font-family: cursive ;
-    color: rgb(85, 19, 19); ;
-}
-
-/* Add some basic styling for the buttons */
+/* Filter Buttons */
 .filter-buttons {
     text-align: center;
     margin: 20px 0;
 }
+
 .filter-buttons button {
     padding: 10px 20px;
     margin: 0 10px;
     font-size: 16px;
     cursor: pointer;
 }
+
 .filter-buttons button.active {
     background-color: #f3f8e5;
     color: rgb(27, 170, 63);
 }
+
 .imagec {
     margin: 20px 0;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Mobile-friendly images */
+    .image-box {
+        width: 45%; /* Use 45% width for medium screens */
+    }
+    .image-container {
+        flex-wrap: wrap; /* Allow images to wrap */
+        gap: 15px; /* Add more space between items */
+    }
+
+    /* Adjust paragraphs under images */
+    .paragraphs p {
+        width: 45%; /* Adjust width of paragraph to fit */
+    }
+
+    nav ul {
+        justify-content: center; /* Center the navigation items */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Full-width boxes for small screens */
+    .image-box {
+        width: 100%;
+    }
+
+    /* Adjust paragraphs under images */
+    .paragraphs p {
+        width: 100%;
+    }
+
+    /* Small screen adjustments to the filter buttons */
+    .filter-buttons button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+/* General Body and Text Styles */
+body {
+    background-color: antiquewhite;
+}
+
+p {
+    font-family: cursive;
+    color: rgb(85, 19, 19);
+}
+
+/* Overlay Text Styling */
+.intro .overlay-text {
+    position: absolute;
+    top: 30%; /* Vertically center the text */
+    left: 50%; /* Horizontally center the text */
+    transform: translate(-50%, -50%); /* Ensure it's perfectly centered */
+    width: 90%; /* Restrict text width for readability */
+    color: rgb(85, 19, 19); /* Text color */
+    font-size: 1.5rem; /* Adjust font size */
+    text-align: center; /* Centers text */
+    padding: 1rem; /* Adds padding */
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+
